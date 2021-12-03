@@ -3,9 +3,10 @@ How To Use ggmsa
 
 ## Install Packages
 
-You need two packages to create an alignment, `Biostrings` is a
+You need three packages to create an alignment, `Biostrings` is a
 Bioconductor package which is really useful for loading in seq data in
-several formats including `.fasta`. `ggmsa` is a really nice package for
+several formats including `.fasta`. `msa` is a package used for creating
+multiple sequence alignments. `ggmsa` is a really nice package for
 visualising pretty/publication alignments which uses ggplot type
 functionality.
 
@@ -16,6 +17,7 @@ if (!requireNamespace("BiocManager", quietly = TRUE))
     install.packages("BiocManager")
 
 BiocManager::install("Biostrings")
+BiocManager::install("msa")
 
 if (!requireNamespace("devtools", quietly=TRUE))
     install.packages("devtools")
@@ -26,6 +28,7 @@ devtools::install_github("YuLab-SMU/ggmsa")
 
 ``` r
 library(Biostrings)
+library(msa)
 library(ggmsa)
 ```
 

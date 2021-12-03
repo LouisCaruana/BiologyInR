@@ -8,7 +8,8 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 ## Install Packages
 
-You need two packages to create an alignment, `Biostrings` is a Bioconductor package which is really useful for loading in seq data in several formats including `.fasta`. `ggmsa` is a really nice package for visualising pretty/publication alignments which uses ggplot type functionality.
+You need three packages to create an alignment, `Biostrings` is a Bioconductor package which is really useful for loading in seq data in several formats including `.fasta`. `msa` is a package used for creating multiple sequence alignments. `ggmsa` is a really nice package for visualising pretty/publication alignments which uses ggplot type functionality.
+
 
 To install;
 ```{r eval=F}
@@ -16,6 +17,7 @@ if (!requireNamespace("BiocManager", quietly = TRUE))
     install.packages("BiocManager")
 
 BiocManager::install("Biostrings")
+BiocManager::install("msa")
 
 if (!requireNamespace("devtools", quietly=TRUE))
     install.packages("devtools")
@@ -26,6 +28,7 @@ devtools::install_github("YuLab-SMU/ggmsa")
 ## Load Packages
 ```{r message=FALSE}
 library(Biostrings)
+library(msa)
 library(ggmsa)
 ```
 
@@ -46,7 +49,7 @@ TaRca1_sequences
 ## Create Alignment
 
 Use `ggmsa()` to visualize your alignment. First argument should be your object containing your sequence alignment. Followed by start and end range (You can visualize just a region or your entire alignment if you wish). `facet_msa()` will wrap your alignment by a number of amino acids, every 120 in this example.
-```{r fig.width=20, fig.height=12, message=F}
+```{r fig.width=20, fig.height=6, message=F}
 ggmsa(TaRca1_sequences, 0, 432, font = "DroidSansMono", char_width = 0.65, seq_name = TRUE ) +
 facet_msa(field = 120)
 ```
