@@ -57,9 +57,9 @@ TaRca1_sequences
 
     ## AAStringSet object of length 3:
     ##     width seq                                               names               
-    ## [1]   432 MASAFSSTVGAPASTPTTFLGKK...YLSEAALGQANDDAMATGAFYGK TaRca1B_A_(_Traes...
-    ## [2]   432 --MRMGRRLSNEASTPTTFLGKK...YLSEAALGQANDDAMKTGAFYGK TaRca1B_B_(TraesC...
-    ## [3]   432 MASAFSSTVGAPASTPTTFLGKK...YLSEAALGQANDDAMATGAFYGK TaRca1B_D_(TraesC...
+    ## [1]   432 MASAFSSTVGAPASTPTTFLGKK...YLSEAALGQANDDAMATGAFYGK TaRca1_A_(TraesCS...
+    ## [2]   432 --MRMGRRLSNEASTPTTFLGKK...YLSEAALGQANDDAMKTGAFYGK TaRca1_B_(TraesCS...
+    ## [3]   432 MASAFSSTVGAPASTPTTFLGKK...YLSEAALGQANDDAMATGAFYGK TaRca1_D_(TraesCS...
 
 ## Create Alignment
 
@@ -70,8 +70,8 @@ wish). `facet_msa()` will wrap your alignment by a number of amino
 acids, every 120 in this example.
 
 ``` r
-ggmsa(TaRca1_sequences, 0, 432, font = "DroidSansMono", char_width = 0.50, seq_name = TRUE ) +
-facet_msa(field = 80)
+ggmsa(TaRca1_sequences, 0, 432, font = "DroidSansMono", char_width = 0.50, seq_name = TRUE,border = NA) +
+facet_msa(field = 80) 
 ```
 
 ![](How-to-use-ggmsa_files/figure-gfm/unnamed-chunk-5-1.png)<!-- -->

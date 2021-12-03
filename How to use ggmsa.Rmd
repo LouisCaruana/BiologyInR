@@ -50,8 +50,9 @@ TaRca1_sequences
 
 Use `ggmsa()` to visualize your alignment. First argument should be your object containing your sequence alignment. Followed by start and end range (You can visualize just a region or your entire alignment if you wish). `facet_msa()` will wrap your alignment by a number of amino acids, every 120 in this example.
 ```{r fig.width=16, fig.height=8, message=F}
-ggmsa(TaRca1_sequences, 0, 432, font = "DroidSansMono", char_width = 0.50, seq_name = TRUE ) +
-facet_msa(field = 80)
+ggmsa(TaRca1_sequences, 0, 432, font = "DroidSansMono", char_width = 0.50, seq_name = TRUE,border = NA) +
+facet_msa(field = 80) 
+
 ```
 
 
