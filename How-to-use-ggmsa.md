@@ -70,8 +70,8 @@ wish). `facet_msa()` will wrap your alignment by a number of amino
 acids, every 120 in this example.
 
 ``` r
-ggmsa(TaRca1_sequences, 0, 432, font = "DroidSansMono", char_width = 0.65, seq_name = TRUE ) +
-facet_msa(field = 120)
+ggmsa(TaRca1_sequences, 0, 432, font = "DroidSansMono", char_width = 0.50, seq_name = TRUE ) +
+facet_msa(field = 80)
 ```
 
 ![](How-to-use-ggmsa_files/figure-gfm/unnamed-chunk-5-1.png)<!-- -->
