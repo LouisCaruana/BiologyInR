@@ -71,12 +71,34 @@ Rca1_CDS_Alignment
 
 
 
-```{r}
 
+
+
+
+align.h3.vs.m3a <- Biostrings::pairwiseAlignment(
+                  hShroom3,
+                  mShroom3a)
+
+```{r}
+Rca1_ABD_CDS <- readDNAStringSet(c('TaRca1B_A (TraesCS4A02G177600.1)_CDS.fasta', 
+                                   'TaRca1B_B (TraesCS4B02G140200.2)_CDS.fasta',
+                                   'TaRca1B_D (TraesCS4D02G134900.1)_CDS.fasta'))
+Rca1_ABD_CDS
+```
+
+```{r}
+Rca1_ABD_CDS_Alignment <- msa(Rca1_ABD_CDS)
+
+Rca1_ABD_CDS_Alignment <- DNAStringSet(Rca1_ABD_CDS_Alignment)
 ```
 
 
 
+
+```{r fig.width=18, fig.height=16}
+ggmsa(Rca1_ABD_CDS_Alignment,0, 1299, font = "DroidSansMono", char_width = 0.50, seq_name = TRUE,border = NA)+
+facet_msa(field = 120)
+```
 
 
 

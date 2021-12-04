@@ -110,3 +110,40 @@ Rca1_CDS_Alignment
     ## [2] ATGGCTTCTGCTTTCTCATCCACCGT...GACCGGCGCCTTCTACGGCAAGTAG TaRca1B_D_(TraesC...
     ## [3] ----ATGCGGATGGGGCGGAGGCTAT...GACCGGCGCCTTCTACGGCAAGTAG TaRca1B_B_(TraesC...
     ## Con ATGGCTTCTGCTTTCTCGTCCACCGT...GACCGGCGCCTTCTACGGCAAGTAG Consensus
+
+align.h3.vs.m3a \<- Biostrings::pairwiseAlignment( hShroom3, mShroom3a)
+
+``` r
+Rca1_ABD_CDS <- readDNAStringSet(c('TaRca1B_A (TraesCS4A02G177600.1)_CDS.fasta', 
+                                   'TaRca1B_B (TraesCS4B02G140200.2)_CDS.fasta',
+                                   'TaRca1B_D (TraesCS4D02G134900.1)_CDS.fasta'))
+Rca1_ABD_CDS
+```
+
+    ## DNAStringSet object of length 3:
+    ##     width seq                                               names               
+    ## [1]  1299 ATGGCTTCTGCTTTCTCGTCCAC...CCGGCGCCTTCTACGGCAAGTAG TaRca1B_A_(TraesC...
+    ## [2]  1293 ATGCGGATGGGGCGGAGGCTATC...CCGGCGCCTTCTACGGCAAGTAG TaRca1B_B_(TraesC...
+    ## [3]  1299 ATGGCTTCTGCTTTCTCATCCAC...CCGGCGCCTTCTACGGCAAGTAG TaRca1B_D_(TraesC...
+
+``` r
+Rca1_ABD_CDS_Alignment <- msa(Rca1_ABD_CDS)
+```
+
+    ## use default substitution matrix
+
+``` r
+Rca1_ABD_CDS_Alignment <- DNAStringSet(Rca1_ABD_CDS_Alignment)
+```
+
+``` r
+ggmsa(Rca1_ABD_CDS_Alignment,0, 1299, font = "DroidSansMono", char_width = 0.50, seq_name = TRUE,border = NA)+
+facet_msa(field = 120)
+```
+
+    ## Scale for 'x' is already present. Adding another scale for 'x', which will
+    ## replace the existing scale.
+
+    ## Coordinate system already present. Adding new coordinate system, which will replace the existing one.
+
+![](How-to-use-ggmsa_files/figure-gfm/unnamed-chunk-10-1.png)<!-- -->
