@@ -79,6 +79,7 @@ If you want to also align and visualize protein sequences, you can either read i
 Rca1_AA <- translate(Rca1_CDS)
 Rca1_AA_Alignment <- msa(Rca1_AA)
 Rca1_AA_Alignment <- AAStringSet(Rca1_AA_Alignment)
+
 ggmsa(Rca1_AA_Alignment, 0, 433, char_width = 0.45, seq_name = TRUE) +
   facet_msa(field = 60)
 ```

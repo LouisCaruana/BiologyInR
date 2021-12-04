@@ -143,6 +143,7 @@ Rca1_AA_Alignment <- msa(Rca1_AA)
 
 ``` r
 Rca1_AA_Alignment <- AAStringSet(Rca1_AA_Alignment)
+
 ggmsa(Rca1_AA_Alignment, 0, 433, char_width = 0.45, seq_name = TRUE) +
   facet_msa(field = 60)
 ```
