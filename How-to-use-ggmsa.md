@@ -75,3 +75,38 @@ facet_msa(field = 80)
 ```
 
 ![](How-to-use-ggmsa_files/figure-gfm/unnamed-chunk-5-1.png)<!-- -->
+
+## DNA Alignment
+
+``` r
+Rca1_CDS <- readDNAStringSet('TaRca1_CDS.fasta')
+Rca1_CDS
+```
+
+    ## DNAStringSet object of length 3:
+    ##     width seq                                               names               
+    ## [1]  1299 ATGGCTTCTGCTTTCTCGTCCAC...CCGGCGCCTTCTACGGCAAGTAG TaRca1B_A_(TraesC...
+    ## [2]  1293 ATGCGGATGGGGCGGAGGCTATC...CCGGCGCCTTCTACGGCAAGTAG TaRca1B_B_(TraesC...
+    ## [3]  1299 ATGGCTTCTGCTTTCTCATCCAC...CCGGCGCCTTCTACGGCAAGTAG TaRca1B_D_(TraesC...
+
+``` r
+Rca1_CDS_Alignment <- msa(Rca1_CDS)
+```
+
+    ## use default substitution matrix
+
+``` r
+Rca1_CDS_Alignment
+```
+
+    ## CLUSTAL 2.1  
+    ## 
+    ## Call:
+    ##    msa(Rca1_CDS)
+    ## 
+    ## MsaDNAMultipleAlignment with 3 rows and 1299 columns
+    ##     aln                                                    names
+    ## [1] ATGGCTTCTGCTTTCTCGTCCACCGT...GACCGGCGCCTTCTACGGCAAGTAG TaRca1B_A_(TraesC...
+    ## [2] ATGGCTTCTGCTTTCTCATCCACCGT...GACCGGCGCCTTCTACGGCAAGTAG TaRca1B_D_(TraesC...
+    ## [3] ----ATGCGGATGGGGCGGAGGCTAT...GACCGGCGCCTTCTACGGCAAGTAG TaRca1B_B_(TraesC...
+    ## Con ATGGCTTCTGCTTTCTCGTCCACCGT...GACCGGCGCCTTCTACGGCAAGTAG Consensus

@@ -55,6 +55,30 @@ facet_msa(field = 80)
 
 ```
 
+## DNA Alignment
+
+```{r}
+Rca1_CDS <- readDNAStringSet('TaRca1_CDS.fasta')
+Rca1_CDS
+
+```
+
+
+```{r}
+Rca1_CDS_Alignment <- msa(Rca1_CDS)
+Rca1_CDS_Alignment
+```
+
+
+
+```{r}
+
+```
+
+
+
+
+
 
 
 
