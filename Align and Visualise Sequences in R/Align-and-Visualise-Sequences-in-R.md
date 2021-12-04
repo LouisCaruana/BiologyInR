@@ -127,6 +127,13 @@ ggmsa(Rca1_CDS_Alignment, 0, 1299, char_width = 0.45, seq_name = TRUE) +
 
 ## Translate and Align Protein Sequences
 
+If you want to also align and visualize protein sequences, you can
+either read in amino acid `.fasta` files and repeat the above
+instructions but using `readAAStringSet()` and `AAStringSet()`
+respectively. Alternatively Biostrings can transcribe and translate the
+DNA coding sequence for you, below is a brief example with a protein
+alignment.
+
 ``` r
 Rca1_AA <- translate(Rca1_CDS)
 Rca1_AA_Alignment <- msa(Rca1_AA)
