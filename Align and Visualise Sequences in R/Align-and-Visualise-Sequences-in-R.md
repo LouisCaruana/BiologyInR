@@ -10,7 +10,7 @@ a package used for creating multiple sequence alignments. `ggmsa` is a
 nice package that will visualize the alignments using ggplot style
 functionality.
 
-### To install;
+### To Install;
 
 ``` r
 ## BiocManager (Bioconductor Manager) is required to install bioconductor packages as they are hosted in their own repository not on CRAN.
@@ -33,7 +33,7 @@ library(msa)
 library(ggmsa)
 ```
 
-## Load the sequences
+## Load the Sequences
 
 To import DNA, RNA, or Amino Acid sequences I like to use
 `readDNAStringSet()`, `readRNAStringSet()`, or `readAAStringSet`
@@ -59,7 +59,7 @@ Rca1_CDS
     ## [2]  1293 ATGCGGATGGGGCGGAGGCTATC...CCGGCGCCTTCTACGGCAAGTAG TaRca1_B_(TraesCS...
     ## [3]  1299 ATGGCTTCTGCTTTCTCATCCAC...CCGGCGCCTTCTACGGCAAGTAG TaRca1_D_(TraesCS...
 
-## Align the sequences
+## Align the Sequences
 
 Biostrings can perform a sequence alignment of two sequences using
 `pairwiseAlignment()`. To align more than two sequences you need to use
@@ -90,7 +90,7 @@ Rca1_CDS_Alignment
     ## [3] ----ATGCGGATGGGGCGGAGGCTAT...GACCGGCGCCTTCTACGGCAAGTAG TaRca1_B_(TraesCS...
     ## Con ATGGCTTCTGCTTTCTCGTCCACCGT...GACCGGCGCCTTCTACGGCAAGTAG Consensus
 
-## Reformat the alignment
+## Reformat the Alignment
 
 Aligning sequences with `msa` returns the alignment in a non
 bioconductor friendly format. Calling `DNAStringSet` on the alignment
@@ -109,7 +109,7 @@ Rca1_CDS_Alignment
     ## [2]  1299 ATGGCTTCTGCTTTCTCATCCAC...CCGGCGCCTTCTACGGCAAGTAG TaRca1_D_(TraesCS...
     ## [3]  1299 ----ATGCGGATGGGGCGGAGGC...CCGGCGCCTTCTACGGCAAGTAG TaRca1_B_(TraesCS...
 
-## Visualise the alignment
+## Visualise the Alignment
 
 `ggmsa` is a nice package for visualizing alignments, note this package
 does not align your sequences so do make sure that you are using an
