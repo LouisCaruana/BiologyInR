@@ -124,3 +124,20 @@ ggmsa(Rca1_CDS_Alignment, 0, 1299, char_width = 0.45, seq_name = TRUE) +
 ```
 
 ![](Align-and-Visualise-Sequences-in-R_files/figure-gfm/unnamed-chunk-6-1.png)<!-- -->
+
+## Translate and Align Protein Sequences
+
+``` r
+Rca1_AA <- translate(Rca1_CDS)
+Rca1_AA_Alignment <- msa(Rca1_AA)
+```
+
+    ## use default substitution matrix
+
+``` r
+Rca1_AA_Alignment <- AAStringSet(Rca1_AA_Alignment)
+ggmsa(Rca1_AA_Alignment, 0, 433, char_width = 0.45, seq_name = TRUE) +
+  facet_msa(field = 60)
+```
+
+![](Align-and-Visualise-Sequences-in-R_files/figure-gfm/unnamed-chunk-7-1.png)<!-- -->
