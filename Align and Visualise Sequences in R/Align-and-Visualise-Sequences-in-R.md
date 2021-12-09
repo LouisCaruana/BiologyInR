@@ -145,7 +145,7 @@ Rca1_AA_Alignment <- msa(Rca1_AA)
 Rca1_AA_Alignment <- AAStringSet(Rca1_AA_Alignment)
 
 ggmsa(Rca1_AA_Alignment, 49, 433, char_width = 0.55, seq_name = TRUE) +
-  facet_msa(field = 60)
+  facet_msa(field = 120)
 ```
 
 ![](Align-and-Visualise-Sequences-in-R_files/figure-gfm/unnamed-chunk-7-1.png)<!-- -->
