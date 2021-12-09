@@ -55,9 +55,9 @@ Rca1_CDS
 
     ## DNAStringSet object of length 3:
     ##     width seq                                               names               
-    ## [1]  1299 ATGGCTTCTGCTTTCTCGTCCAC...CCGGCGCCTTCTACGGCAAGTAG TaRca1_A_(TraesCS...
-    ## [2]  1293 ATGCGGATGGGGCGGAGGCTATC...CCGGCGCCTTCTACGGCAAGTAG TaRca1_B_(TraesCS...
-    ## [3]  1299 ATGGCTTCTGCTTTCTCATCCAC...CCGGCGCCTTCTACGGCAAGTAG TaRca1_D_(TraesCS...
+    ## [1]  1299 ATGGCTTCTGCTTTCTCGTCCAC...CCGGCGCCTTCTACGGCAAGTAG TaRca1_A_CDS
+    ## [2]  1293 ATGCGGATGGGGCGGAGGCTATC...CCGGCGCCTTCTACGGCAAGTAG TaRca1_B_CDS
+    ## [3]  1299 ATGGCTTCTGCTTTCTCATCCAC...CCGGCGCCTTCTACGGCAAGTAG TaRca1_D_CDS
 
 ## Align the Sequences
 
@@ -85,9 +85,9 @@ Rca1_CDS_Alignment
     ## 
     ## MsaDNAMultipleAlignment with 3 rows and 1299 columns
     ##     aln                                                    names
-    ## [1] ATGGCTTCTGCTTTCTCGTCCACCGT...GACCGGCGCCTTCTACGGCAAGTAG TaRca1_A_(TraesCS...
-    ## [2] ATGGCTTCTGCTTTCTCATCCACCGT...GACCGGCGCCTTCTACGGCAAGTAG TaRca1_D_(TraesCS...
-    ## [3] ----ATGCGGATGGGGCGGAGGCTAT...GACCGGCGCCTTCTACGGCAAGTAG TaRca1_B_(TraesCS...
+    ## [1] ATGGCTTCTGCTTTCTCGTCCACCGT...GACCGGCGCCTTCTACGGCAAGTAG TaRca1_A_CDS
+    ## [2] ATGGCTTCTGCTTTCTCATCCACCGT...GACCGGCGCCTTCTACGGCAAGTAG TaRca1_D_CDS
+    ## [3] ----ATGCGGATGGGGCGGAGGCTAT...GACCGGCGCCTTCTACGGCAAGTAG TaRca1_B_CDS
     ## Con ATGGCTTCTGCTTTCTCGTCCACCGT...GACCGGCGCCTTCTACGGCAAGTAG Consensus
 
 ## Reformat the Alignment
@@ -105,9 +105,9 @@ Rca1_CDS_Alignment
 
     ## DNAStringSet object of length 3:
     ##     width seq                                               names               
-    ## [1]  1299 ATGGCTTCTGCTTTCTCGTCCAC...CCGGCGCCTTCTACGGCAAGTAG TaRca1_A_(TraesCS...
-    ## [2]  1299 ATGGCTTCTGCTTTCTCATCCAC...CCGGCGCCTTCTACGGCAAGTAG TaRca1_D_(TraesCS...
-    ## [3]  1299 ----ATGCGGATGGGGCGGAGGC...CCGGCGCCTTCTACGGCAAGTAG TaRca1_B_(TraesCS...
+    ## [1]  1299 ATGGCTTCTGCTTTCTCGTCCAC...CCGGCGCCTTCTACGGCAAGTAG TaRca1_A_CDS
+    ## [2]  1299 ATGGCTTCTGCTTTCTCATCCAC...CCGGCGCCTTCTACGGCAAGTAG TaRca1_D_CDS
+    ## [3]  1299 ----ATGCGGATGGGGCGGAGGC...CCGGCGCCTTCTACGGCAAGTAG TaRca1_B_CDS
 
 ## Visualise the Alignment
 
@@ -119,7 +119,7 @@ point, so you can visualize just part of your alignment if you wish.
 this example.
 
 ``` r
-ggmsa(Rca1_CDS_Alignment, 0, 1299, char_width = 0.45, seq_name = TRUE) +
+ggmsa(Rca1_CDS_Alignment, 145, 1299, char_width = 0.55, seq_name = TRUE) +
   facet_msa(field = 120)
 ```
 
@@ -144,7 +144,7 @@ Rca1_AA_Alignment <- msa(Rca1_AA)
 ``` r
 Rca1_AA_Alignment <- AAStringSet(Rca1_AA_Alignment)
 
-ggmsa(Rca1_AA_Alignment, 0, 433, char_width = 0.45, seq_name = TRUE) +
+ggmsa(Rca1_AA_Alignment, 49, 433, char_width = 0.55, seq_name = TRUE) +
   facet_msa(field = 60)
 ```
 
